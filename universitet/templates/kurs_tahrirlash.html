@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Tahririlash</h1>
+<form method="post">
+    {%csrf_token%}
+    <label>Nomi:</label><br>
+    <input type="text" name="nom" value="{{kurs.nom}}"><br> <br>
+     <label>Daraja:</label><br>
+    <input type="text" name="daraja" value="{{kurs.daraja}}"><br> <br>
+     <label>Narx:</label><br>
+    <input type="number" name="narx" value="{{kurs.narx}}"><br> <br>
+    <label>Chegrima:</label><br>
+    <input type="text" name="chegirma" value="{{kurs.chegirma}}"><br> <br>
+    <button type="submit">Tahrirlash</button>
+</form>
+
+</body>
+</html>

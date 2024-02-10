@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<h1>Tahririlash</h1>
+<form method="post">
+    {%csrf_token%}
+    <label>Ismi:</label><br>
+    <input type="text" name="ism" value="{{ustoz.ism}}"><br> <br>
+     <label>Familiya:</label><br>
+    <input type="text" name="familiya" value="{{ustoz.familiya}}"><br> <br>
+     <label>Jinsi:</label><br>
+    <input type="text" name="jinsi" value="{{ustoz.jinsi}}"><br> <br>
+    <label>Yosh:</label><br>
+    <input type="number" name="yosh" value="{{ustoz.yosh}}"><br> <br>
+    <button type="submit">Tahrirlash</button>
+</form>
+</body>
+</html>

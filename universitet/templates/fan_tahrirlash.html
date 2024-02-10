@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Tahrirlash</h1>
+<form method="post">
+    {%csrf_token%}
+    <label>Nomi:</label><br>
+    <input type="text" name="nomi" value="{{fans.nomi}}"><br> <br>
+     <label>O'qituvchi:</label><br><br>
+    <select name="oqituvchi">
+        {% for ustoz in ustozlar %}
+        <option value="{{ustoz.id}}">{{ustoz.ism}}</option>
+        {%endfor%}
+    </select>
+     <label>Credit:</label><br>
+    <input type="number" name="credit" value="{{fans.credit}}"><br> <br>
+    <button type="submit">Tahrirlash</button>
+</form>
+</body>
+</html>

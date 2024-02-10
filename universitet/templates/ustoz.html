@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<br>
+<hr>
+<br>
+<h1>Hamma ustozlar ro'yhati</h1>
+<br>
+<hr>
+<br>
+{% for teach in teachers %}
+<h2>Ism:{{teach.ism}}, Familiya:{{teach.familiya}}, Yosh:{{teach.yosh}}
+    <a href="/edit1/{{ teach.id }}/tahrirlash/">
+        <button>Tahrirlash</button>
+    </a>
+    {% endfor %}
+</h2>
+<br>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Qo'shish</button>
+</form>
+</body>
+</html>
